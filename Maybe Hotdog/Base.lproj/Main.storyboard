@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Take Pic View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TakePicViewController" customModule="Maybe_Hotdog" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe Hotdog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-tr-aAC">
+                                <rect key="frame" x="131" y="50" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9Y-5Z-3H3">
+                                <rect key="frame" x="141" y="171" width="92" height="30"/>
+                                <state key="normal" title="See if hotdog"/>
+                                <connections>
+                                    <action selector="SeeIfHotdogTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2a-sk-oo0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3tL-tr-aAC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="2So-iQ-RQr"/>
+                            <constraint firstItem="3tL-tr-aAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TIt-3z-QBD"/>
+                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WXq-hA-bIb"/>
+                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="top" secondItem="3tL-tr-aAC" secondAttribute="bottom" constant="100" id="uMZ-us-JbB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="6T9-H1-Obs" kind="show" identifier="theSegue" id="wfl-1b-Zfy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="xlR-gF-pHD">
+            <objects>
+                <viewController id="6T9-H1-Obs" customClass="ResultsViewController" customModule="Maybe_Hotdog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gCx-sB-0fT"/>
+                        <viewControllerLayoutGuide type="bottom" id="D0z-ki-aDp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IZh-ar-xA5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xeZ-Pv-H9Z">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Maybe hotdog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzd-iQ-sg3">
+                                <rect key="frame" x="132" y="50" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uzd-iQ-sg3" firstAttribute="centerX" secondItem="IZh-ar-xA5" secondAttribute="centerX" id="DBl-YS-WSz"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="xeZ-Pv-H9Z" secondAttribute="bottom" id="FZh-st-OXM"/>
+                            <constraint firstItem="xeZ-Pv-H9Z" firstAttribute="leading" secondItem="IZh-ar-xA5" secondAttribute="leading" id="T5L-dk-XDm"/>
+                            <constraint firstAttribute="trailing" secondItem="xeZ-Pv-H9Z" secondAttribute="trailing" id="VOh-rU-EwG"/>
+                            <constraint firstItem="xeZ-Pv-H9Z" firstAttribute="top" secondItem="gCx-sB-0fT" secondAttribute="bottom" id="xJc-jc-DCS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="xeZ-Pv-H9Z" id="JcA-5T-DlH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtf-aE-9ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>
