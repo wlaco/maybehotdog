@@ -11,33 +11,37 @@ import UIKit
 class TakePicViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var imagePicker = UIImagePickerController()
-    var image : UIImage!
+    var image = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-
-        }
-
+        
+    }
+    
     @IBAction func SeeIfHotdogTapped(_ sender: Any) {
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
-        
-        performSegue(withIdentifier: "theSegue", sender: nil)
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        
+        performSegue(withIdentifier: "theSegue", sender: image)
+
+        imagePicker.dismiss(animated: true, completion: nil)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextVC = segue.destination as! ResultsViewController
         
-        nextVC.imageView.image? = image
-
+        nextVC.image = sender as? UIImage
+        
     }
-
+    
 }
 
