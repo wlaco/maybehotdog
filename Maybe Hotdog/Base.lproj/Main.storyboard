@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,27 +22,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe Hotdog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-tr-aAC">
-                                <rect key="frame" x="131" y="94" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tL-tr-aAC">
+                                <rect key="frame" x="90" y="164" width="195" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="aOh-RY-xyP"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Maybe Hotdog">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Futura-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9Y-5Z-3H3">
-                                <rect key="frame" x="141" y="215" width="92" height="30"/>
+                                <rect key="frame" x="130" y="452" width="114" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7fm-LH-Ulc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="See if hotdog"/>
                                 <connections>
                                     <action selector="SeeIfHotdogTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2a-sk-oo0"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot_dog.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="obW-TU-61k">
+                                <rect key="frame" x="68" y="246" width="171" height="156"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPQ-D5-zj6">
+                                <rect key="frame" x="247" y="294" width="60" height="60"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="?">
+                                        <attributes>
+                                            <font key="NSFont" size="55" name="HelveticaNeue-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.82420265081469057" blue="0.47807513613105102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3tL-tr-aAC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="2So-iQ-RQr"/>
-                            <constraint firstItem="3tL-tr-aAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TIt-3z-QBD"/>
-                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WXq-hA-bIb"/>
-                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="top" secondItem="3tL-tr-aAC" secondAttribute="bottom" constant="100" id="uMZ-us-JbB"/>
+                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="top" secondItem="obW-TU-61k" secondAttribute="bottom" constant="50" id="2MO-1g-5n5"/>
+                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="top" secondItem="jPQ-D5-zj6" secondAttribute="bottom" constant="98" id="66r-Ue-4UQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jPQ-D5-zj6" secondAttribute="trailing" constant="52" id="AY1-4d-vRt"/>
+                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHp-sl-v91"/>
+                            <constraint firstItem="obW-TU-61k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="JBg-K3-jL2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k9Y-5Z-3H3" secondAttribute="bottom" constant="180" id="N3l-AW-hwi"/>
+                            <constraint firstItem="3tL-tr-aAC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QjR-eE-Xrg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="obW-TU-61k" secondAttribute="trailing" constant="120" id="VKj-uJ-AGh"/>
+                            <constraint firstItem="3tL-tr-aAC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="VhN-KG-iey"/>
+                            <constraint firstItem="jPQ-D5-zj6" firstAttribute="top" secondItem="3tL-tr-aAC" secondAttribute="bottom" constant="98" id="WwZ-d9-Png"/>
+                            <constraint firstItem="obW-TU-61k" firstAttribute="top" secondItem="3tL-tr-aAC" secondAttribute="bottom" constant="50" id="aCA-ea-Qwp"/>
+                            <constraint firstItem="jPQ-D5-zj6" firstAttribute="leading" secondItem="obW-TU-61k" secondAttribute="trailing" constant="8" id="gCp-D8-uKn"/>
+                            <constraint firstItem="3tL-tr-aAC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ynz-h4-t4r"/>
+                            <constraint firstItem="k9Y-5Z-3H3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zuv-vv-80e"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VhN-KG-iey"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="9Nv-7M-AGA"/>
                     <connections>
@@ -64,28 +108,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xeZ-Pv-H9Z">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xeZ-Pv-H9Z">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maybe hotdog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfY-n4-xy0">
-                                <rect key="frame" x="132" y="94" width="111" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfY-n4-xy0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.98431372549019602" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Nrd-Ur-skD"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Yes, maybe hotdog">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Futura-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question_Mark_1.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ppv-MC-kLp">
+                                <rect key="frame" x="0.0" y="617" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OTk-oq-8K6"/>
+                                    <constraint firstAttribute="width" constant="60" id="oxz-fM-OZT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot_dog.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-uB-iKZ">
+                                <rect key="frame" x="68" y="617" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PEv-56-mMk"/>
+                                    <constraint firstAttribute="width" constant="60" id="X81-fI-5um"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question_Mark_1.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="SVr-pn-EOI">
+                                <rect key="frame" x="136" y="617" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9QW-4p-jPc"/>
+                                    <constraint firstAttribute="height" constant="50" id="Vav-PG-D9G"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot_dog.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="zch-Bk-xwF">
+                                <rect key="frame" x="204" y="617" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="3tT-gU-DJ0"/>
+                                    <constraint firstAttribute="height" constant="50" id="HCc-5B-JQd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Question_Mark_1.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="HWu-7v-RTf">
+                                <rect key="frame" x="272" y="617" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hqv-T1-wEH"/>
+                                    <constraint firstAttribute="width" constant="60" id="rtt-O4-OD5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot_dog.svg.png" translatesAutoresizingMaskIntoConstraints="NO" id="91e-xy-c3s">
+                                <rect key="frame" x="340" y="617" width="60" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0uN-pV-GKi"/>
+                                    <constraint firstAttribute="height" constant="50" id="VWy-xe-qS3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.98431372549999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HWu-7v-RTf" firstAttribute="leading" secondItem="zch-Bk-xwF" secondAttribute="trailing" constant="8" id="47U-ff-t0w"/>
+                            <constraint firstItem="sfY-n4-xy0" firstAttribute="leading" secondItem="IZh-ar-xA5" secondAttribute="leading" id="5ad-s0-ekl"/>
                             <constraint firstItem="sfY-n4-xy0" firstAttribute="centerX" secondItem="IZh-ar-xA5" secondAttribute="centerX" id="7ri-H0-osN"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="dFl-uB-iKZ" secondAttribute="bottom" id="8bi-Kz-BBK"/>
+                            <constraint firstItem="91e-xy-c3s" firstAttribute="leading" secondItem="HWu-7v-RTf" secondAttribute="trailing" constant="8" id="BJG-Ai-tqs"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="91e-xy-c3s" secondAttribute="bottom" id="EqG-2j-gAz"/>
+                            <constraint firstAttribute="trailing" secondItem="sfY-n4-xy0" secondAttribute="trailing" id="EvR-UI-ZOQ"/>
                             <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="xeZ-Pv-H9Z" secondAttribute="bottom" id="FZh-st-OXM"/>
+                            <constraint firstItem="Ppv-MC-kLp" firstAttribute="leading" secondItem="IZh-ar-xA5" secondAttribute="leading" id="I3t-Rh-VX9"/>
+                            <constraint firstItem="zch-Bk-xwF" firstAttribute="leading" secondItem="SVr-pn-EOI" secondAttribute="trailing" constant="8" id="Mtd-22-Z4B"/>
+                            <constraint firstItem="SVr-pn-EOI" firstAttribute="leading" secondItem="dFl-uB-iKZ" secondAttribute="trailing" constant="8" id="Q1W-w7-uIh"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="SVr-pn-EOI" secondAttribute="bottom" id="Sup-UC-SAe"/>
                             <constraint firstItem="xeZ-Pv-H9Z" firstAttribute="leading" secondItem="IZh-ar-xA5" secondAttribute="leading" id="T5L-dk-XDm"/>
                             <constraint firstAttribute="trailing" secondItem="xeZ-Pv-H9Z" secondAttribute="trailing" id="VOh-rU-EwG"/>
-                            <constraint firstItem="sfY-n4-xy0" firstAttribute="top" secondItem="gCx-sB-0fT" secondAttribute="bottom" constant="30" id="nil-fc-Om6"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="Ppv-MC-kLp" secondAttribute="bottom" id="XIf-fC-QUN"/>
+                            <constraint firstItem="dFl-uB-iKZ" firstAttribute="leading" secondItem="Ppv-MC-kLp" secondAttribute="trailing" constant="8" id="gtL-pu-Mgo"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="HWu-7v-RTf" secondAttribute="bottom" id="hgn-87-I8J"/>
+                            <constraint firstItem="D0z-ki-aDp" firstAttribute="top" secondItem="zch-Bk-xwF" secondAttribute="bottom" id="mO3-xt-VFm"/>
+                            <constraint firstItem="sfY-n4-xy0" firstAttribute="top" secondItem="gCx-sB-0fT" secondAttribute="bottom" id="nil-fc-Om6"/>
+                            <constraint firstItem="sfY-n4-xy0" firstAttribute="leading" secondItem="IZh-ar-xA5" secondAttribute="leadingMargin" id="rNu-Rs-llH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sfY-n4-xy0" secondAttribute="trailing" id="sWT-sD-XDT"/>
                             <constraint firstItem="xeZ-Pv-H9Z" firstAttribute="top" secondItem="gCx-sB-0fT" secondAttribute="bottom" id="xJc-jc-DCS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rNu-Rs-llH"/>
+                                <exclude reference="sWT-sD-XDT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="xeZ-Pv-H9Z" id="JcA-5T-DlH"/>
+                        <outlet property="label" destination="sfY-n4-xy0" id="WdP-Ef-ZpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtf-aE-9ES" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,4 +230,8 @@
             <point key="canvasLocation" x="300" y="-646.32683658170924"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hot_dog.svg.png" width="1280" height="868"/>
+        <image name="Question_Mark_1.svg.png" width="1013" height="1024"/>
+    </resources>
 </document>

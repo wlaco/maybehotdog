@@ -10,6 +10,7 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
     var image : UIImage?
@@ -18,6 +19,10 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         
         imageView.image = image
+        
+        label.textColor = UIColor.red
+//        label.shadowColor = UIColor.black
+        
         
     }
 

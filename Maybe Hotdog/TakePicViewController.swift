@@ -20,7 +20,7 @@ class TakePicViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func SeeIfHotdogTapped(_ sender: Any) {
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
 

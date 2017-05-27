@@ -13,6 +13,8 @@
 		961090021ED8B8F2009E65B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961090011ED8B8F2009E65B2 /* Assets.xcassets */; };
 		961090051ED8B8F2009E65B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961090031ED8B8F2009E65B2 /* LaunchScreen.storyboard */; };
 		967D55F01ED8CC7C00A4C4D6 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D55EF1ED8CC7C00A4C4D6 /* ResultsViewController.swift */; };
+		967D55F41ED8E12600A4C4D6 /* Hot_dog.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D55F31ED8E12600A4C4D6 /* Hot_dog.svg.png */; };
+		967D55F61ED9034F00A4C4D6 /* Question_Mark_1.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 967D55F51ED9034F00A4C4D6 /* Question_Mark_1.svg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		961090041ED8B8F2009E65B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		961090061ED8B8F2009E65B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967D55EF1ED8CC7C00A4C4D6 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		967D55F31ED8E12600A4C4D6 /* Hot_dog.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hot_dog.svg.png; sourceTree = "<group>"; };
+		967D55F51ED9034F00A4C4D6 /* Question_Mark_1.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Question_Mark_1.svg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				96108FFC1ED8B8F1009E65B2 /* TakePicViewController.swift */,
 				967D55EF1ED8CC7C00A4C4D6 /* ResultsViewController.swift */,
 				96108FFE1ED8B8F2009E65B2 /* Main.storyboard */,
+				967D55F31ED8E12600A4C4D6 /* Hot_dog.svg.png */,
+				967D55F51ED9034F00A4C4D6 /* Question_Mark_1.svg.png */,
 				961090011ED8B8F2009E65B2 /* Assets.xcassets */,
 				961090031ED8B8F2009E65B2 /* LaunchScreen.storyboard */,
 				961090061ED8B8F2009E65B2 /* Info.plist */,
@@ -99,6 +105,7 @@
 				TargetAttributes = {
 					96108FF61ED8B8F1009E65B2 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 78U48K8L63;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,8 +133,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967D55F41ED8E12600A4C4D6 /* Hot_dog.svg.png in Resources */,
 				961090051ED8B8F2009E65B2 /* LaunchScreen.storyboard in Resources */,
 				961090021ED8B8F2009E65B2 /* Assets.xcassets in Resources */,
+				967D55F61ED9034F00A4C4D6 /* Question_Mark_1.svg.png in Resources */,
 				961090001ED8B8F2009E65B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78U48K8L63;
 				INFOPLIST_FILE = "Maybe Hotdog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WL.Maybe-Hotdog";
@@ -278,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78U48K8L63;
 				INFOPLIST_FILE = "Maybe Hotdog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WL.Maybe-Hotdog";
