@@ -16,7 +16,7 @@ class TakePicViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        
+                
     }
     
     @IBAction func SeeIfHotdogTapped(_ sender: Any) {
